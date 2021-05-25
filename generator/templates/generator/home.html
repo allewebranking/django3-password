@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+      h1{
+        text-align: center;
+        color:#0d47a3;
+        font-size: 35px;
+      }
+      .form{
+        margin-left: 46%;
+        font-size:20px;
+      }
+      body{
+        background-color:#ccdffc;
+
+      }
+      button{
+          width:auto;
+          height: auto;
+
+      }
+      a{
+        font-size: 20px;
+        text-decoration:none;
+
+      }
+  </style>
+  <body>
+    <h1>Password Generator</h1>
+    <div class="form">
+      <form class="" action="{% url 'password' %}">
+          <select  name="lenght">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+
+          </select>
+          <br>
+          <input type="checkbox" name="Uppercase" >Maiuscole
+          <br>
+            <input type="checkbox" name="numeri" > Numeri
+          <br>
+          <input type="checkbox" name="caratteri speciali" > Caratteri speciali
+          <br>
+          <input type="submit" name="" value="Generate Password">
+      </form>
+      <button type="button" name="button" value="About"><a href="{% url 'Autor' %}">About</a></button>
+    </div>
+
+  </body>
+</html>
